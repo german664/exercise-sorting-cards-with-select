@@ -124,6 +124,8 @@ let sortCards = () => {
 
 
 
+    } else {
+        alert("No hay cartas para barajar. Por favor presiona el boton de repartir")
     }
 
 }
