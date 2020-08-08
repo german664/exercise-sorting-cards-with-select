@@ -1,0 +1,127 @@
+body {
+    background-color: #17a72a;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.input * {
+    margin: 5px;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+}
+
+.input *:focus {
+    box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+
+#bubbleDeck h2 {
+    text-align: center;
+}
+
+#bubbleDeck {
+    margin-top: 30px;
+}
+
+.card {
+    width: 80px;
+    height: 120px;
+    background-color: white;
+    border-radius: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    margin: 5px;
+}
+
+.card .number {
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.spades::before {
+    content: '\2660';
+    display: block;
+    font-size: 30px;
+    width: 100%;
+    text-align: left;
+
+}
+
+.spades::after {
+    content: '\2660';
+    display: block;
+    font-size: 30px;
+    width: 100%;
+    text-align: left;
+    transform: rotate(180deg);
+
+}
+
+.cubs::before {
+    content: '\2663';
+    display: block;
+    font-size: 30px;
+    width: 100%;
+    text-align: left;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.cubs::after {
+    content: '\2663';
+    display: block;
+    font-size: 30px;
+    width: 100%;
+    text-align: left;
+    transform: rotate(180deg);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.hearts::before {
+    content: '\2665';
+    color: red;
+    display: block;
+    font-size: 30px;
+    width: 100%;
+    text-align: left;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.hearts::after {
+    content: '\2665';
+    color: red;
+    display: block;
+    font-size: 30px;
+    width: 100%;
+    text-align: left;
+    transform: rotate(180deg);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.diamonds::before {
+    content: '\2666';
+    color: red;
+    display: block;
+    font-size: 30px;
+    width: 100%;
+    text-align: left;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.diamonds::after {
+    content: '\2666';
+    color: red;
+    display: block;
+    font-size: 30px;
+    width: 100%;
+    text-align: left;
+    transform: rotate(180deg);
+    border-radius: 10px 10px 0px 0px;
+}
