@@ -78,35 +78,31 @@ let generateCard = () => {
 
 
 let sortArray = (arr) => {
-    let wall = arr.length - 1;
-    let numberOfTry = 0;
-    while (wall > 0) {
-        let index = 0;
+    let min = 0;
 
-        while (index < wall) {
 
-            let log = document.createElement("p");
-            log.innerHTML = numberOfTry;
-            bubbleDeck.appendChild(log)
-            for (let j = 0; j < arr.length; j++) {
-                createCard(arr[j], bubbleDeck)
 
-            }
+    while (min < arr.length - 1) {
+        let log = document.createElement("p");
+        log.innerHTML = numberOfTry;
+        bubbleDeck.appendChild(log)
+        for (let j = 0; j < arr.length; j++) {
+            createCard(arr[j], bubbleDeck)
 
-            if (arr[index].number > arr[index + 1].number) {
-                let aux = arr[index].number;
-                arr[index].number = arr[index + 1].number;
-                arr[index + 1].number = aux;
-            }
-
-            index++
-            numberOfTry++
         }
-
-        wall--;
+        for (let i = min + 1; i < arr.length - 1; i++) {
+            if (arr[min] > arr[i]) {
+                let aux = arr[min];
+                arr[min] = arr[i];
+                arr[i] = aux;
+            }
+        }
+        min++;
     }
-    return arr
-}
+    return arr;
+};
+
+
 
 let sortCards = () => {
     let newCardSet = sortArray(cardsToSort);
